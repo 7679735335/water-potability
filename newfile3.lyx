@@ -1,0 +1,1373 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+customHeadersFooters
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headsep 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Project on water potability
+\begin_inset Newline newline
+\end_inset
+
+Explanatory Analysis
+\begin_inset Newline newline
+\end_inset
+
+Presidency University
+\end_layout
+
+\begin_layout Author
+Shubhamoy Paul
+\end_layout
+
+\begin_layout Left Header
+water potability
+\end_layout
+
+\begin_layout Right Header
+presidency university
+\end_layout
+
+\begin_layout Left Footer
+shubhamoy paul
+\end_layout
+
+\begin_layout Center Footer
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I am took a water potability dataset from kaggle.Data file name is 
+\series bold
+
+\begin_inset CommandInset href
+LatexCommand href
+name "water_potability.csv"
+target "https://www.kaggle.com/datasets/adityakadiwal/water-potability"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Contex
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\qquad$
+\end_inset
+
+Access to safe drinking-water is essential to health, a basic human right
+ and a component of effective policy for health protection.
+ This is important as a health and development issue at a national, regional
+ and local level.
+ In some regions, it has been shown that investments in water supply and
+ sanitation can yield a net economic benefit, since the reductions in adverse
+ health effects and health care costs outweigh the costs of undertaking
+ the interventions.
+\end_layout
+
+\begin_layout Section*
+Content
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\qquad$
+\end_inset
+
+The water_potability.csv file contains water quality metrics for 3276 different
+ water bodies.
+\end_layout
+
+\begin_layout Description
+pH
+\begin_inset Formula $\enskip$
+\end_inset
+
+value: PH is an important parameter in evaluating the acid–base balance
+ of water.
+ It is also the indicator of acidic or alkaline condition of water status.
+ WHO has recommended maximum permissible limit of pH from 6.5 to 8.5.
+ The current investigation ranges were 6.52–6.83 which are in the range of
+ WHO standards.
+\end_layout
+
+\begin_layout Description
+Hardness: Hardness is mainly caused by calcium and magnesium salts.
+ These salts are dissolved from geologic deposits through which water travels.
+ The length of time water is in contact with hardness producing material
+ helps determine how much hardness there is in raw water.
+ Hardness was originally defined as the capacity of water to precipitate
+ soap caused by Calcium and Magnesium.
+\end_layout
+
+\begin_layout Description
+Solids
+\begin_inset Formula $\;$
+\end_inset
+
+(Total
+\begin_inset Formula $\enskip$
+\end_inset
+
+dissolved
+\begin_inset Formula $\enskip$
+\end_inset
+
+solids
+\begin_inset Formula $\enskip$
+\end_inset
+
+-
+\begin_inset Formula $\enskip$
+\end_inset
+
+TDS): Water has the ability to dissolve a wide range of inorganic and some
+ organic minerals or salts such as potassium, calcium, sodium, bicarbonates,
+ chlorides, magnesium, sulfates etc.
+ These minerals produced un-wanted taste and diluted color in appearance
+ of water.
+ This is the important parameter for the use of water.
+ The water with high TDS value indicates that water is highly mineralized.
+ Desirable limit for TDS is 500 mg/l and maximum limit is 1000 mg/l which
+ prescribed for drinking purpose.
+\end_layout
+
+\begin_layout Description
+Chloramines: Chlorine and chloramine are the major disinfectants used in
+ public water systems.
+ Chloramines are most commonly formed when ammonia is added to chlorine
+ to treat drinking water.
+ Chlorine levels up to 4 milligrams per liter (mg/L or 4 parts per million
+ (ppm)) are considered safe in drinking water.
+\end_layout
+
+\begin_layout Description
+Sulfate: Sulfates are naturally occurring substances that are found in minerals,
+ soil, and rocks.
+ They are present in ambient air, groundwater, plants, and food.
+ The principal commercial use of sulfate is in the chemical industry.
+ Sulfate concentration in seawater is about 2,700 milligrams per liter (mg/L).
+ It ranges from 3 to 30 mg/L in most freshwater supplies, although much
+ higher concentrations (1000 mg/L) are found in some geographic locations.
+\end_layout
+
+\begin_layout Description
+Conductivity: Pure water is not a good conductor of electric current rather’s
+ a good insulator.
+ Increase in ions concentration enhances the electrical conductivity of
+ water.
+ Generally, the amount of dissolved solids in water determines the electrical
+ conductivity.
+ Electrical conductivity (EC) actually measures the ionic process of a solution
+ that enables it to transmit current.
+ According to WHO standards, EC value should not exceeded 400 μS/cm.
+\end_layout
+
+\begin_layout Description
+Organic_carbon: Total Organic Carbon (TOC) in source waters comes from decaying
+ natural organic matter (NOM) as well as synthetic sources.
+ TOC is a measure of the total amount of carbon in organic compounds in
+ pure water.
+ According to US EPA < 2 mg/L as TOC in treated / drinking water, and <
+ 4 mg/Lit in source water which is use for treatment.
+\end_layout
+
+\begin_layout Description
+Trihalomethanes: THMs are chemicals which may be found in water treated
+ with chlorine.
+ The concentration of THMs in drinking water varies according to the level
+ of organic material in the water, the amount of chlorine required to treat
+ the water, and the temperature of the water that is being treated.
+ THM levels up to 80 ppm is considered safe in drinking water.
+\end_layout
+
+\begin_layout Description
+Turbidity: The turbidity of water depends on the quantity of solid matter
+ present in the suspended state.
+ It is a measure of light emitting properties of water and the test is used
+ to indicate the quality of waste discharge with respect to colloidal matter.
+ The mean turbidity value obtained for Wondo Genet Campus (0.98 NTU) is lower
+ than the WHO recommended value of 5.00 NTU.
+\end_layout
+
+\begin_layout Description
+Potability: Indicates if water is safe for human consumption where 1 means
+ Potable and 0 means Not potable.
+\end_layout
+
+\begin_layout Standard
+We are doing explonetory analysis on it then we will fit a model on it.
+\begin_inset Newline newline
+\end_inset
+
+Some basic step we have to follow for analyzing a dataset.this
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+step 2.
+\end_layout
+
+\end_inset
+
+Cleaning the dataset
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align left
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+step 1.
+\end_layout
+
+\end_inset
+
+Loading the dataset
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+step 3.
+\end_layout
+
+\end_inset
+
+Visualized the dataset
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+step 4.
+\end_layout
+
+\end_inset
+
+Fit a model on it
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset Formula $\;$
+\end_inset
+
+1:
+\end_layout
+
+\begin_layout Standard
+I load water portability data from my local file.and show 1st nth row of
+ the dataset using 
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fbox{head()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+options(warn=-1)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+data =read.csv("C:/Users/SVMY/Downloads/R project/water_potability.csv")
+\end_layout
+
+\begin_layout Plain Layout
+
+head(data)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I want to see columm names and dimmension of our dataset.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+colnames(data) #columms name
+\end_layout
+
+\begin_layout Plain Layout
+
+dim(data)   #dimmension of data
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our dataset contains 3276 rows and 10 columms.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset Formula $\;$
+\end_inset
+
+2:
+\end_layout
+
+\begin_layout Standard
+we want to is there any null value in dataset.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+sum(is.na(data))  #sum of null values if in dataset
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It shows that there 1434 cells are empty.Now we have to remove these empty
+ from our dataset otherwise it will make trouble to analysis our dataset.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<echo=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+data=na.omit(data)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+sum(is.na(data))
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we are interest to type of each variables.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+sapply(data, typeof)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+here data types are integer and double(float) .so we no need to change any
+ thing.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Outlier
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=F,comment=NA,fig.width=100,fig.height=4>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+options(warn=-1)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(plotly)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(webshot)
+\end_layout
+
+\begin_layout Plain Layout
+
+l <- htmltools::tagList()
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i in 1:9){
+\end_layout
+
+\begin_layout Plain Layout
+
+l[[i]]=as.widget(plot_ly(y = data[,i], boxpoints = 'outliers', type = "box",name
+ = colnames(data)[i],marker = list(color = 'rgb(107,174,214)'),
+\end_layout
+
+\begin_layout Plain Layout
+
+        line = list(color = 'rgb(107,174,214)'),fillcolor = palette(rainbow(9))[
+i]))
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- subplot(l[[1]], l[[2]],l[[3]],l[[4]],l[[5]],l[[6]],l[[7]],l[[8]],l[[9]])
+ %>% layout(title = 'viewing outliear')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fig
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Rplot.png
+	width 18cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now visulizing each variables which define water purity.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+pH
+\begin_inset Formula $\enskip$
+\end_inset
+
+value:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=F>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(
+\begin_inset Quotes eld
+\end_inset
+
+webshot
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(plotly)
+\end_layout
+
+\begin_layout Plain Layout
+
+x=c(length(which(data$ph<6.52)),length(which(data$ph>6.52 & data$ph<6.83)),length(w
+hich(data$ph>6.83)))
+\end_layout
+
+\begin_layout Plain Layout
+
+txt=c(paste0(round((x[1]/sum(x))*100,2), "%"),paste0(round((x[2]/sum(x))*100,2),
+ "%"),paste0(round((x[3]/sum(x))*100,2), "%"))
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- plot_ly(
+\end_layout
+
+\begin_layout Plain Layout
+
+  x = c("low ph", "ideal ph", "high ph"),
+\end_layout
+
+\begin_layout Plain Layout
+
+  y = x,
+\end_layout
+
+\begin_layout Plain Layout
+
+  name = "SF Zoo",
+\end_layout
+
+\begin_layout Plain Layout
+
+  type = "bar",
+\end_layout
+
+\begin_layout Plain Layout
+
+  text=txt,
+\end_layout
+
+\begin_layout Plain Layout
+
+  marker = list(color = c('rgba(204,204,204,1)', 'rgba(103,195,66,0.8)',
+\end_layout
+
+\begin_layout Plain Layout
+
+                          'rgba(204,204,204,1)'))
+\end_layout
+
+\begin_layout Plain Layout
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fig
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Hardness:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=F,comment=NA,fig.height=60>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+label=c("Soft","Moderately high","Hard","Very Hard")
+\end_layout
+
+\begin_layout Plain Layout
+
+values=c(length(which(data>0 & data<60)),length(which(data>61 & data<120)),lengt
+h(which(data>121 & data<180)),length(which(data>180)))
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- plot_ly(type='pie', labels=label, values=values, 
+\end_layout
+
+\begin_layout Plain Layout
+
+               textinfo='label+percent',
+\end_layout
+
+\begin_layout Plain Layout
+
+               insidetextorientation='radial')
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- fig %>% layout(title = "Pie chart on water hardness")
+\end_layout
+
+\begin_layout Plain Layout
+
+fig
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Rplot01.png
+	width 18cm
+	height 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Solids:
+\end_layout
+
+\begin_layout Standard
+there is only one value which is below 1000 this means that all the water
+ is safe coresponding this solids variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+length(which(data$Solids<1000))
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Chloramines:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+label=c("safe water","unsafe water")
+\end_layout
+
+\begin_layout Plain Layout
+
+values=c(length(which( data$Chloramines<4)),length(which(data$Chloramines>4)))
+\end_layout
+
+\begin_layout Plain Layout
+
+colors <- c('rgba(103,195,66,0.8)','rgba(204,204,204,1)')
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- plot_ly(, labels=label, values=values,
+\end_layout
+
+\begin_layout Plain Layout
+
+               textinfo='label+percent',marker = list(colors = colors))
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- fig %>% add_pie(hole = 0.6)
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- fig %>% layout(title = "Pie chart on water hardness")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fig
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Sulfate:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA,fig.height=5>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(density(data$Conductivity), main="frequency density plot")
+\end_layout
+
+\begin_layout Plain Layout
+
+polygon(density(data$Conductivity), col="aquamarine3", border="blue")
+\end_layout
+
+\begin_layout Plain Layout
+
+abline(v=500,col="red")
+\end_layout
+
+\begin_layout Plain Layout
+
+#locator() #this function is use to locate point in the diagram
+\end_layout
+
+\begin_layout Plain Layout
+
+text(280, 0.003999010, expression("drinking water"))
+\end_layout
+
+\begin_layout Plain Layout
+
+text(650.0549, 0.00392039, expression("contsminated water"))
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Area right side of red line is dirty water,we can't drink this water & area
+ left side of red line is drinking water.
+\end_layout
+
+\begin_layout Subsection*
+Conductivity:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA,fig.height=5>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+x=c(length(which(data$Conductivity<400)),length(which(data$Conductivity>400)))
+\end_layout
+
+\begin_layout Plain Layout
+
+txt=c(paste0(round((x[1]/sum(x))*100,2), "%"),paste0(round((x[2]/sum(x))*100,2),
+ "%"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+colfunc <- colorRampPalette(c("#3FFA5E","#3FFA5E", "red","#FA4B3F"))
+\end_layout
+
+\begin_layout Plain Layout
+
+hist(data$Conductivity,breaks = seq(from=0,to=800,length=50),col=colfunc(50),mai
+n = "frequency diagram on Conductivity",xlab = "Conductivity")
+\end_layout
+
+\begin_layout Plain Layout
+
+abline(v=400,col="blue")
+\end_layout
+
+\begin_layout Plain Layout
+
+#locator()
+\end_layout
+
+\begin_layout Plain Layout
+
+text(90, 120, txt[1])
+\end_layout
+
+\begin_layout Plain Layout
+
+text(570, 134, txt[2])
+\end_layout
+
+\begin_layout Plain Layout
+
+text(90, 110, "safe")
+\end_layout
+
+\begin_layout Plain Layout
+
+text(570, 120, "unsafe")
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Trihalomethanes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+label1=c("drinking water","dirty water")
+\end_layout
+
+\begin_layout Plain Layout
+
+values1=c(length(which( data$Trihalomethanes<80)),length(which(data$Trihalometha
+nes>80)))
+\end_layout
+
+\begin_layout Plain Layout
+
+colors <- c('#3AB4F2','#FFFFFF')
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- plot_ly(, labels=label1, values=values1,
+\end_layout
+
+\begin_layout Plain Layout
+
+               textinfo='label+percent',
+\end_layout
+
+\begin_layout Plain Layout
+
+               insidetextorientation='radial',marker = list(colors = colors))
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- fig %>% add_pie(hole = 0.8)
+\end_layout
+
+\begin_layout Plain Layout
+
+fig <- fig %>% layout(title = "Pie chart on Trihalomethanes")
+\end_layout
+
+\begin_layout Plain Layout
+
+fig
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Correlation plot
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(psych)
+\end_layout
+
+\begin_layout Plain Layout
+
+corPlot(data, cex = 1.2)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+this correlation plot is not usefull for us.
+\end_layout
+
+\begin_layout Subsection*
+Fitting a model:
+\end_layout
+
+\begin_layout Standard
+Splitting dataset into training and test dataset and our spliting ratio
+ 70-30,then extract indepnedent(x) and dependent variables(y)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<eval=T,comment=NA>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+#split dataset
+\end_layout
+
+\begin_layout Plain Layout
+
+library(caTools)
+\end_layout
+
+\begin_layout Plain Layout
+
+train = sample.split(data, SplitRatio = .70)
+\end_layout
+
+\begin_layout Plain Layout
+
+train <- subset( data, train==TRUE )[,1:10]
+\end_layout
+
+\begin_layout Plain Layout
+
+test <- subset( data, train==FALSE)[,1:10]
+\end_layout
+
+\begin_layout Plain Layout
+
+trainst=scale(train)
+\end_layout
+
+\begin_layout Plain Layout
+
+testst=scale(test)
+\end_layout
+
+\begin_layout Plain Layout
+
+x=trainst[,1:9]
+\end_layout
+
+\begin_layout Plain Layout
+
+y=trainst[,10]
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+here we can't perform linear model because our response is in binary format
+ ,so we will use GLM(gerenalized linear model).
+\end_layout
+
+\end_body
+\end_document
